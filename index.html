@@ -1,44 +1,52 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/style.css">
     <title>Drum Kit</title>
-</head>
-<body>
-    
-    <div class="key">
-        <kbd>A</kbd>
-    </div>
-    <div class="key">
-        <kbd>S</kbd>
-    </div>
-    <div class="key">
-        <kbd>D</kbd>
-    </div>
-    <div class="key">
-        <kbd>F</kbd>
-    </div>
-    <div class="key">
-        <kbd>G</kbd>
-    </div>
-    <div class="key">
-        <kbd>H</kbd>
-    </div>
-    <div class="key">
-        <kbd>J</kbd>
-    </div>
-    <div class="key">
-        <kbd>K</kbd>
-    </div>
-    <div class="key">
-        <kbd>L</kbd>
-    </div>
-
-
-
-
-    <script src="script.js"></script>
-</body>
+  </head>
+  <body>
+    <main>      
+      <div class="keys">
+        <div data-key="65" class="key">
+          <kbd>A</kbd>
+          <span>CLAP</span>
+        </div>
+        <div data-key="83" class="key">
+          <kbd>S</kbd>
+          <span>HIHAT</span>
+        </div>
+        <div data-key="68" class="key">
+          <kbd>D</kbd>
+          <span>KICK</span>
+        </div>
+        <div data-key="70" class="key">
+          <kbd>F</kbd>
+          <span>OPENHAT</span>
+        </div>
+        <div data-key="71" class="key">
+          <kbd>G</kbd>
+          <span>BOOM</span>
+        </div>
+        <div data-key="72" class="key">
+          <kbd>H</kbd>
+          <span>RIDE</span>
+        </div>
+        <div data-key="74" class="key">
+          <kbd>J</kbd>
+          <span>SNARE</span>
+        </div>
+        <div data-key="75" class="key">
+          <kbd>K</kbd>
+          <span>TOM</span>
+        </div>
+        <div data-key="76" class="key">
+          <kbd>L</kbd>
+          <span>TINK</span>
+        </div>        
+      </div>
+    </main>
+    <script type="module" src="/src/main.js"></script>
+  </body>
 </html>

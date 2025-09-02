@@ -42,7 +42,7 @@ main {
   min-height: 80px;
   max-height: 120px;
   text-align: center;
-  transition: all 0.2s ease;
+  transition: all 0.1s ease;
   cursor: pointer;
 }
 
@@ -56,6 +56,11 @@ main {
 }
 
 .key:hover {
+  background-color: white;
+  color: var(--color-primary);
+}
+
+.pressed {
   background-color: white;
   color: var(--color-primary);
 }

@@ -1,20 +1,23 @@
+function triggerKey(keyElement) {
+    const soundName = keyElement.querySelector('span').textContent.toLowerCase();
+    const audio = new Audio(`/sounds/${soundName}.wav`);
+    audio.play();
+    keyElement.classList.add('pressed');
+    setTimeout(() => keyElement.classList.remove('pressed'), 150);
 
-function playSound(spanText) {
-    const sound = new Audio(`/sounds/${spanText.toLowerCase()}.wav`);
-    sound.play();
 }
 
 const keys = document.querySelectorAll('.key');
 
-
-document.addEventListener('keydown', keyPressed => {
+document.addEventListener('keydown', event => {
     keys.forEach(key => {
-        const keyLetter = key.querySelector('kbd').textContent.toLowerCase();
-        if(keyPressed.key === keyLetter) {
-            playSound(key.querySelector('span').textContent);
-            key.classList.add('pressed');
-            document.addEventListener('keyup', () => key.classList.remove('pressed'));
+        const keyLabel = key.querySelector('kbd').textContent.toUpperCase();
+        if(event.key.toUpperCase() === keyLabel) {
+            triggerKey(key);
         }
     });
+});
 
+keys.forEach(key => {
+    key.addEventListener('mousedown', () => triggerKey(key));
 });
